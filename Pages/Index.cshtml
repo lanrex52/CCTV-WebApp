@@ -1,0 +1,78 @@
+﻿@page
+@model CCTV_App.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZURE</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/ucmx.css">
+    <!--<link rel="stylesheet" href="css/fcmb.css">!-->
+    <link rel="stylesheet" href="/css/roboto.css">
+    <link rel="stylesheet" href="/css/josefin.css">
+    <script src="/js/jquery3.min.js"></script>
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/ckeditor.js"></script>
+    <script src="/js/canvasjs.min.js"></script>
+    
+    <script>
+        function enforce_maxlength(event) {
+            var t = event.target;
+            if (t.hasAttribute('maxlength')) {
+                t.value = t.value.slice(0, t.getAttribute('maxlength'));
+            }
+        }
+        document.body.addEventListener('input', enforce_maxlength);
+    </script>
+</head>
+
+<body>
+    <div class="app mx-auto">
+        <div class="left-app text-center">
+            <!-- <img src="/img/makefg.png">!-->
+            <h2 class="text-center"><b>CCTV APPLICATION</b></h2>
+        </div>
+        <div class="right-app">
+            <div class="top">
+                <img src="/img/firstbank3.png" class="float-right" style="width:50" height="50">
+            </div>
+            <div class="col-md-12 text-center">
+                <img src="/img/fbn.png" width="100" height="100"><hr>
+                <h5 style="color:gray"><b>Hey, good to see you Again!</b></h5>
+                <div class="col-md-12 mx-auto login first">
+
+                    <div>
+                        @Model.Message
+                    </div>
+
+                    <form method="post"  autocomplete="off">
+                        <div class="form-group">
+                            <input type="text" asp-for="User.Username" placeholder="Username/Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" asp-for="User.Password" placeholder="Enter Password" class="form-control">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn fcmb-btn " >Login&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

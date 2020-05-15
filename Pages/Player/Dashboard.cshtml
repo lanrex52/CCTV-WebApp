@@ -1,0 +1,128 @@
+﻿@page
+@model CCTV_App.Pages.Player.DashboardModel
+@{
+
+    string date = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+
+}
+    <script src="/js/canvasjs.min.js"></script>
+<div class="azure-content">
+    <div class="content-nav">
+        <div class="c-left">
+            <img src="/img/firstbank3.png" alt="FCMB Logo">
+            <p><b>@date</b></p>
+            <p>
+                <b id="txt">
+
+                </b>
+            </p>
+        </div>
+
+    </div>
+    <div class="three-boxes">
+        <div class="boxes">
+            <div class="l-box">
+                <div class="circle text-center">
+                    <i class="fa fa-upload"></i>
+                </div>
+            </div>
+            <div class="r-box">
+
+                <p><b>Total Uploaded Content</b></p>
+
+
+                <h3><b> @Model.FilesInContainer.Count()</b></h3>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="l-box">
+                <div class="circle text-center">
+                    <i class="fa fa-spinner"></i>
+                </div>
+            </div>
+            <div class="r-box">
+                <p><b>Available Branches</b></p>
+
+                <h3><b>1</b></h3>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="l-box">
+                <div class="circle text-center">
+                    <i class="fa fa-video"></i>
+                </div>
+            </div>
+            <div class="r-box">
+                <p><b>Videos</b></p>
+
+                <h3><b>@Model.FilesInContainer.Count()</b></h3>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="l-box">
+                <div class="circle text-center">
+                    <i class="fa fa-image"></i>
+                </div>
+            </div>
+            <div class="r-box">
+                <p><b>Total Camera</b></p>
+
+                <h3><b>22</b></h3>
+            </div>
+        </div>
+    </div>
+    <div class="large-box">
+        <div class="l-content">
+
+            <div id="chartContainer"></div>
+            <div id="chartContainer2"></div>
+
+            <script>
+                window.onload = function () {
+                    var chart2 = new CanvasJS.Chart("chartContainer", {
+                        animationEnabled: true,
+                        backgroundColor: false,
+                        theme: "light2",
+                        title: {
+                            text: "Total Blobs in Storage",
+                            fontSize: 15
+                        },
+                        subtitles: [{
+                            text: "Lagos>"
+                        }],
+                        data: [{
+                            type: "pie",
+                            yValueFormatString: "####",
+                            indexLabel: "{label} ({y})",
+                            dataPoints: [{ label:"Videos",y:@Model.FilesInContainer.Count()}],
+                        }]
+                    });
+                    chart2.render();
+
+                    var chart = new CanvasJS.Chart("chartContainer2", {
+                        animationEnabled: true,
+                        backgroundColor: false,
+                        theme: "light2",
+                        title: {
+                            text: "Thumbnails and Videos in Storage",
+                            fontSize: 20
+                        },
+
+                        axisY: {
+                            title: ""
+                        },
+                        data: [{
+                            type: "column",
+                            yValueFormatString: "#### Files",
+                            dataPoints:
+                               [{ label:"Videos",y:@Model.FilesInContainer.Count()}],
+                        }]
+                    });
+
+                    chart.render();
+                }
+            </script>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,145 @@
+﻿@page
+@model CCTV_App.Pages.RegistrationModel
+@{
+    int i = 1;
+    string date = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+
+}
+
+<div class="azure-content">
+    <div class="content-nav">
+        <div class="c-left">
+            <img src="/img/firstbank3.png" alt="FCMB Logo">
+            <p><b>@date</b></p>
+            <p>
+                <b id="txt">
+
+                </b>
+            </p>
+        </div>
+
+    </div>
+
+    @*<link rel="stylesheet" href="/css/jquery.dataTables.min.css">*@
+
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <div class="muser">
+        <div class="row">
+            <div class="col-md-6">
+                <h6 class="alert alert-warning text-center" style="padding:3px">Add a New User</h6>
+                <p class="upload-info" style="font-size:11px;">
+                </p>
+                <form method="post" autocomplete="off">
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>First Name</label>
+                                <input type="text" asp-for="User.FirstName" class="form-control" placeholder="First Name" id="bio-fname">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Last Name</label>
+                                <input type="text" asp-for="User.LastName" class="form-control" placeholder="Last Name" id="bio-lname">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Mobile Number</label>
+                                <input type="number" asp-for="User.MobileNo" class="form-control" placeholder="Mobile Number" id="bio-mobile" maxlength="11">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Email</label>
+                                <input type="email" asp-for="User.Email" class="form-control" placeholder="Email Address" id="bio-email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>User Role</label>
+                                <select class="form-control" asp-for="User.Role" id="bio-role" style="font-size:11px;">
+                                    <option value="">Select User Role</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="user">User</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Username</label>
+                                <input type="text" asp-for="User.Username" class="form-control" placeholder="Username" id="bio-uname">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Password</label>
+                                <input type="password" asp-for="User.Password" class="form-control" placeholder="Password" id="bio-pwd">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Confirm Password</label>
+                                <input type="password" asp-for="User.ConfirmPassword" class="form-control" placeholder="Confirm Password" id="bio-cpwd">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Location</label>
+                                <select class="form-control" asp-for="User.Location" id="bio-location" style="font-size:11px;">
+                                    <option value="">Select User Location</option>
+                                    <option value="Abuja_wuse">Abuja_wuse</option>
+                                    <option value="Lagos_Jakande">Lagos_Jakande</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <hr>
+                                <input type="submit" class="btn btn-warning btn-sm btn-block" value="Add User" id="bio-assign">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <table id="myTable" class="display" style="font-size:11px;width:100%">
+                    <thead>
+                        <tr>
+
+                            <th>S/N</th>
+
+
+                            <th>Username</th>
+
+
+
+                            <th>First Name</th>
+
+
+                            <th>Last Name</th>
+
+                            <th>Email</th>
+
+                            <th>Role</th>
+
+                            <th>Created By</th>
+
+                            <th>Date Created</th>
+                        </tr>
+
+
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var users in Model.ListUsers)
+                        {
+                        <tr>
+                            <td><span>@i</span></td>
+                            <td>@users.Username</td>
+                            <td>@users.FirstName</td>
+                            <td>@users.LastName</td>
+                            <td>@users.Email</td>
+                            <td>@users.Role</td>
+                            <td>@users.CreatedBy</td>
+                            <td>@users.CreatedDate</td>
+
+                        </tr>
+                            i++;
+                        }
+                    </tbody>
+                </table>
+                <script>
+                    $(document).ready(function () {
+                        $('#myTable').DataTable();
+
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>

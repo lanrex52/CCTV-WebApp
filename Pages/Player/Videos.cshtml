@@ -1,0 +1,114 @@
+﻿@page
+@model CCTV_App.Pages.Player.VideosModel
+@{
+
+    string date = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+
+}
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+
+<script src="/js/videopopup.js"></script>
+<link rel="stylesheet" href="/css/videopopup.css">
+
+<div class="azure-content">
+    <div class="content-nav">
+        <div class="c-left">
+            <img src="/img/firstbank3.png" alt="FCMB Logo">
+            <p><b>@date</b></p>
+            <p>
+                <b id="txt">
+
+                </b>
+            </p>
+        </div>
+
+    </div>
+    <div class="video-content">
+        <div class="sorting">
+
+            <form method="post" asp-page-handler="search" autocomplete="off">
+                <div class="container">
+                    <small class="float-right"><b>Lagos<i class="fa fa-caret-right">&nbsp;&nbsp;</i></b></small>
+                    <small>Search by Date</small><hr>
+                    <div class="row">
+
+                        <div class="form-group col-md-3">
+                            <input type="text" name="search" placeholder="YYYY-MM-DD" required pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" title="Enter a date in this format YYYY-MM-DD" class="form-control" />
+
+                        </div>
+                        <div class="form-group col-md-3">
+                            <button type="submit" name="search" class="form-control btn btn-fcmb">Search</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <hr>
+
+        @foreach (var filename in Model.FilesInContainer)
+        {
+            <div class="feeds text-center">
+                @*<a href="javascript:void(0)" id="video-trigger">Play Video</a>*@
+
+                <div id="vidBox">
+                    <div id="videCont">
+                        <video id="demo" poster="/img/video.jpg" controls>
+
+                            <source src="@filename" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                @*<a href="@filename"><img src="/img/video.jpg" width="80" height="80"></a>*@
+                @{
+                    string substr = filename.Substring(filename.Length - 23);
+                    string vdate = substr.Substring(0, 10);
+                    string temptime = substr.Substring(substr.Length - 12);
+                    string time = temptime.Substring(0, 8);
+                }
+                <p style="font-size:10px;"><b>Date:@vdate <br> Time: @time</b></p>
+
+            </div>
+
+        }
+
+        <script>
+            $(function () {
+                $('#vidBox').VideoPopUp({
+                    opener: "video-trigger",
+                    idvideo: "demo"
+                });
+
+                $('#vidBox').VideoPopUp({
+                    pausevideo: true
+                });
+                $('#vidBox').VideoPopUp({
+                    backgroundColor: "#000000"
+                });
+            });
+
+
+        </script>
+
+    </div>
+
+    <div class='paginator'>
+        @{
+            var prevDisabled = !Model.FilesInContainer.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.FilesInContainer.HasNextPage ? "disabled" : "";
+            <a asp-page="/Player/Videos"
+               asp-route-pageIndex="@(Model.FilesInContainer.PageIndex - 1)"
+               asp-route-currentFilter="@Model.CurrentFilter"
+               class="btn btn-primary @prevDisabled">Previous</a>
+            <a asp-page="/Player/Videos"
+               asp-route-pageIndex="@(Model.FilesInContainer.PageIndex + 1)"
+               asp-route-currentFilter="@Model.CurrentFilter"
+               class="btn btn-primary @nextDisabled">Next</a>
+        }
+    </div>
+
+</div>

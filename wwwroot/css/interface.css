@@ -1,0 +1,297 @@
+body{width: 100%;margin: 0;padding: 0;font-family: 'Roboto', sans-serif;}
+.backdrop{width: 100%;margin:0;padding: 0;height: 100vh;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 30px;}
+.interface{width: 38%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 38%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.top-interface{width: 100%;height: 290px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logoimg{width: 18%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;}
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 38%;height: 150px;position: absolute;z-index: 4;padding-left: 40px;padding-right: 20px; margin-top: -50px;}
+.checkin{width: 28%;height: 120px;background: white;float: left;margin-right: 20px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}
+.bottom-interface{width: 100%;height: 290px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 150px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 50px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}
+.staffs{width:100%;height: 50px;padding: 10px 90px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}
+.user{width: 100%;height: 50px;}
+.user a{text-decoration: none;color: black}
+.newuser{width: 50%;height: 50px;float: left;padding:10px; cursor:pointer;}
+.olduser{width: 50%;height: 50px;float: left;padding:10px; cursor:pointer;}
+.active{background: rgba(0, 135, 81,0.9);color: white;}
+.active a{color: white;}
+.form-cons{width: 100%;height: 500px;padding: 20px;}
+.form-cons input{border: none;border-bottom: 1px solid black;border-radius: 0px;}
+.form-cons select{border: none;border-bottom: 1px solid black;border-radius: 0px;}
+.form-cons input[type="submit"]{border: none;border-radius: 20px; width: 30%;height: 40px;float: right;}
+.form-cons input[type="button"]{border: none;}
+.form-cons input[type="text"]{background: none;}
+.form-cons input:focus{border: none; border-bottom: 1px solid green;}
+.form-cons select:focus{border-bottom: 1px solid green;}
+.input-group-prepend{background: none;}
+.input-group-prepend span{background: none;color: rgb(0, 106, 63);border: none;}
+.cams{width: 100%;height: 500px;margin: 0 auto;padding: 0px 50px;}
+#webcam{margin-left: 20%;float: left;}
+#results{margin-left: 20%;float: left;width: 250px;}
+#results img{margin-bottom: 30px;}
+.user_type{width: 100%;height: 480px;}
+.user_type img{width: 12%;border-radius: 20px;margin-bottom: 2px;margin-left: 23%; position: absolute;}
+.user_type table td{border: none;border-bottom: none;}
+.user_type table td b{color:rgb(0, 135, 81);}
+.user_type h4{color:rgb(0, 135, 81); }
+.check-circle i{font-size: 90px}
+.red{color: darkred;}
+.slip{width: 99%;height: 200px;padding: 10px;visibility: hidden;position: absolute;z-index: 3;}
+.slip-img{width: 40%;height: 200px;float: left;padding: 20px;}
+.slip-img img{width: 10%;margin: 0;border-radius: 0;}
+.slip-con{width: 60%;height: 200px;float: left;}
+@media print {
+  body * {
+    visibility: hidden;
+      
+  }
+  #section-to-print, #section-to-print * {visibility: visible;width: 100%;}
+    #section-to-print {position: absolute;left: 0;top: 0; }
+	#section-to-print .slip{width: 99%;height: 200px;padding: 10px;}
+	#section-to-print .slip-img{width: 22%;height: 200px;float: left;padding: 20px;}
+	#section-to-print .slip-con{width: 40%;height: 200px;float: left;padding: 20px;}
+	#section-to-print .slip-con td{width: 40%;}
+ #section-to-print .slip-img img{width: 100%;float: left;}
+    
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.backdrop{width: 100%;margin:0;padding: 0;height: 100vh;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 20px;}
+.interface{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}	
+.top-interface{width: 100%;height: 290px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logo img{width: 100%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;padding-left: 30px;padding-right: 30px;}	
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 88%;height: 150px;position: absolute;z-index: 4;padding-left: 10px;padding-right: 5px; margin-top: -50px;}
+.checkin{width: 30%;height: 100px;background: white;float: left;margin-right: 8px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}	
+.bottom-interface{width: 100%;height: 290px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 100px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 20px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}	
+.staffs{width:100%;height: 50px;padding: 10px 40px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}	
+}
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+.backdrop{width: 100%;margin:0;padding: 0;height: 700px;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 20px;}
+.interface{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}	
+.top-interface{width: 100%;height: 290px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logo img{width: 70%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;padding-left: 30px;padding-right: 30px;}	
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 80%;height: 150px;position: absolute;z-index: 4;padding-left: 20px;padding-right: 8px; margin-top: -50px;}
+.checkin{width: 29%;height: 120px;background: white;float: left;margin-right: 20px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}	
+.bottom-interface{width: 100%;height: 290px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 130px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 20px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}	
+.staffs{width:100%;height: 50px;padding: 10px 40px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}	
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+.backdrop{width: 100%;margin:0;padding: 0;height: 700px;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 20px;}
+.interface{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}	
+.top-interface{width: 100%;height: 290px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logo img{width: 70%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;padding-left: 30px;padding-right: 30px;}	
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 80%;height: 150px;position: absolute;z-index: 4;padding-left: 20px;padding-right: 8px; margin-top: -50px;}
+.checkin{width: 29%;height: 120px;background: white;float: left;margin-right: 20px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}	
+.bottom-interface{width: 100%;height: 290px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 130px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 20px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}	
+.staffs{width:100%;height: 50px;padding: 10px 40px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}	
+}
+
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+.backdrop{width: 100%;margin:0;padding: 0;height: 700px;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 20px;}
+.interface{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 88%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}	
+.top-interface{width: 100%;height: 290px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logo img{width: 70%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;padding-left: 30px;padding-right: 30px;}	
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 80%;height: 150px;position: absolute;z-index: 4;padding-left: 20px;padding-right: 8px; margin-top: -50px;}
+.checkin{width: 29%;height: 120px;background: white;float: left;margin-right: 20px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}	
+.bottom-interface{width: 100%;height: 290px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 130px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 20px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}	
+.staffs{width:100%;height: 50px;padding: 10px 40px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}	
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+.backdrop{width: 100%;margin:0;padding: 0;height: 100vh;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 120px;}
+.interface{width: 78%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 38%;height: 600px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.top-interface{width: 100%;height: 290px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logo img{width: 100%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;}
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 78%;height: 150px;position: absolute;z-index: 4;padding-left: 40px;padding-right: 20px; margin-top: -50px;}
+.checkin{width: 28%;height: 120px;background: white;float: left;margin-right: 20px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}
+.bottom-interface{width: 100%;height: 290px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 120px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 50px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}
+.staffs{width:100%;height: 50px;padding: 10px 90px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
+.backdrop{width: 100%;margin:0;padding: 0;height: 100vh;background: url(../img/Image%201.png)no-repeat;background-size: cover;padding-top: 50px;}
+.interface{width: 78%;height: 700px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 20px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.interfaces{width: 38%;height: 700px;margin: 0 auto;background: white;border-radius: 7px;padding-top: 0px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);}
+.top-interface{width: 100%;height: 350px;}
+.top-con{width: 100%;height: 70px;padding: 0 30px;}
+.time{width: 70%;height: 70px;float: left;}
+.logo{width: 30%;height: 70px;float: left;}
+.time h4{color: darkslategray;}
+.time h6{color: darkslategrey;font-size: 13px;}
+.logo img{width: 100%;}
+.welcome{width: 100%;height: 200px;padding-top: 40px;background: url(../img/welcome.png)no-repeat;background-position: center;}
+.welcome .black{color: black;font-weight: 600;}
+.welcome .green{color: rgb(0, 106, 63);font-weight: 600;}
+.buttons{width: 78%;height: 150px;position: absolute;z-index: 4;padding-left: 40px;padding-right: 20px; margin-top: -50px;}
+.checkin{width: 28%;height: 150px;background: white;float: left;margin-right: 20px;padding-top: 20px;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16));border-radius: 5px;}
+.checkin:hover{transform: scale(0.8)}
+.checkin a img{width: 40%;margin-bottom: 5px}
+.checkin a{font-size: 12px;text-decoration: none;color: black}
+.bottom-interface{width: 100%;height: 350px;background: linear-gradient(0deg, rgba(0, 135, 81,0.9), rgba(0, 106, 63,0.7)),url(../img/Image%201.png);padding-top: 150px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;}
+.btm-content{width: 100%;height: 80px;padding: 10px 50px;}
+.context{width: 50%;float: left;height: 50px;}
+.context img{width: 10%;float: left;margin-right:5px}
+.context p{color: white;font-size: 12px;font-family: 'Roboto', sans-serif;font-weight: 600;}
+.context i{color: white;font-size: 15px;float: left;margin-top: 5px;margin-right: 10px;}
+.context ::placeholder{color:white;font-size: 11px;}
+.context input{float: left;width: 80%;}
+.context input[type="number"]{color: white;font-size: 11px;}
+.context button{float: left;width: 20%;}
+.drop{padding-top: 10px;}
+.staffs{width:100%;height: 50px;padding: 10px 90px;}
+.staffs a{width: 100%; color:rgb(0, 106, 63);background: white;padding: 5px 15px;text-decoration: none;font-weight: 600;filter:drop-shadow(0px 6px 42px rgba(0, 0, 0, 0.16))}
+.staffs a:hover{transform: scale(0.8); color:white;background: rgba(0, 106, 63, 0.4);}
+}
+
+
+
+
+
+

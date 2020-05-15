@@ -1,0 +1,88 @@
+body{width: 100%;padding: 0;margin: 0; font-family: 'Roboto', 'san-serif';}
+.dashboard{width: 100%;height: 100vh;}
+.portal-content{width: 100%;padding: 0;margin: 0;}
+.lagoon-nav{width: 15%;height: 100vh;position: fixed;padding:}
+.blue{background: rgba(3,71,110,1);}
+.dark{background: black;}
+.light{background: gainsboro;}
+.light .dev-links ul li a{color: black;}
+.logo-section{width: 100%;height: 50px;padding: 5px;}
+.logo-section img{width: 50%;}
+.profile-img{width: 100%;height: 150px;padding: 5px;color: white;}
+.dev-links{width: 100%;height: 400px;}
+.dev-links ul{padding: 0;width: 100%;height: auto;}
+.dev-links ul li{width: 100%;list-style: none;float:left;padding: 0;line-height: 30px}
+.dev-links ul li:hover ul li{display: block;}
+.dev-links ul li:hover ul li a{font-size: 11px;}
+.dev-links ul li ul li{display: none;background: rgba(5,5,19,0.4);width: 100%;}
+.dev-links ul li a {width: 100%;padding: 15px;float: left; color: dimgray;font-size: 14px;text-decoration: none;color: white;font-size: 12px;}
+.pix-circle{width: 60%;height: 150px;border-radius: 50%;padding: 5px;}
+.pix-img{width: 100%;height: 100px;border-radius: 50%;}
+.pix-img img{width: 100%;max-height:100px;height: 120px;border-radius: 40%;}
+.azure-nav{width: 13%;height: 100vh;background: rgba(3,71,110,1);padding: 15px;float: left;position: fixed;}
+.clicks{width: 100%;height: 50px;padding: 10px;margin-bottom: 30px;}
+.clicks:hover{background:rgba(3,71,110,1);}
+.clicks a{color: white;text-decoration: none;text-align: left;font-size: 14px;}
+.clicks a i{color: rgb(255,183,23);font-size: 14px;margin-bottom: 10px;}
+.azure-content{width: 85%;height: auto;background: gainsboro;float: left;margin-left: 15%;}
+.content-nav{width: 100%;height: 100px;background: white;padding: 20px;}
+.c-left{width: 50%;float: left;height: 80px;}
+.c-right{width: 50%;float: left;height: 80px;padding-left: 35%;padding-top: 20px;}
+.c-left img{float: left; margin-right: 20px;width: 13%;}
+.c-left p{color: rgba(3,71,110,1);}
+.c-right p {margin-right: 10px; float: left;font-size: 13px;}
+.c-right a {color: rgba(3,71,110,1);}
+.c-right p i{color: rgba(3,71,110,1);font-size: 30px; float: left;}
+.c-right .image{width: 30px;height: 30px;border-radius: 50%;background: rgba(3,71,110,1);float: left;margin-right: 10px;}
+.three-boxes{width: 100%;height: 120px;padding: 10px;}
+.boxes{width: 24%;height: 100px;background: white;float: left; margin-right: 11px;box-shadow:0 5px 8px 0 rgba(0,0,0,.14),0 5px 10px 0 rgba(0,0,0,.14);}
+.l-box{width: 25%;height: 100px;float: left;padding: 10px;}
+.l-box .circle{width: 50px;height: 50px;border-radius: 50%;background: gainsboro;padding: 10px;padding-top: 15px;}
+.l-box .circle i{color:rgba(3,71,110,1);font-size: 20px;}
+.r-box{width: 75%;height: 100px;float: left;padding: 10px;}
+.r-box h3{color: rgba(3,71,110,1);}
+.r-box p{color: rgba(97,94,94,1);font-size: 12px;}
+.large-box{width: 100%;height: 500px;padding: 10px;padding-right: 18px;}
+.l-content{width: 100%;height: 500px;background: white;}
+.video-content{width: 100%;height: 1450px;padding: 10px;background: white;padding-right: 0;}
+.video-content a{font-size: 10px;text-decoration: none;color: black;}
+.feeds a{font-size: 10px;text-decoration: none;color: black;}
+.azures{width: 14%;float: left;margin-right: 30px;height: 200px; margin-bottom: 10px;padding: 0;}
+.feeds{width: 150px; height: 150px;float: left;margin-right: 10px;margin-bottom: 10px;padding: 10px;}
+.azures p{font-size: 10px;font-weight: 600;color: rgba(3,71,110,1);}
+.sorting{width: 100%;height:120px;padding-top: 10px;}
+.sorting .container{padding: 0;margin-left: 10px;}
+.btn-fcmb{background: rgba(3,71,110,1);color: white;height: 30px;padding-top: 3px;}
+.btn-fcmb:hover{background: rgba(72,29,112,1);color: white;transform: scale(0.9);}
+.abuja{display: none;}
+.lagos{display: none;}
+.abuja.active{display: block;}
+.lagos.active{display: block;}
+.one.active{display: none;}
+.muser{width: 100%;height: 1500px;padding: 10px;background: white;}
+.muser label{font-size: 12px;}
+.muser input::placeholder{font-size: 12px;}
+.input-danger{outline: 1px solid crimson;}
+.app{width: 65%;height: 500px;background: white; margin-top: 50px;box-shadow:0 5px 8px 0 rgba(0,0,0,.14),0 5px 10px 0 rgba(0,0,0,.14);}
+.left-app{width: 50%;height: 500px;background: linear-gradient(0deg,rgba(3,71,110,0.7),rgba(3,71,110,0.7)),url(../img/cctv4.jpg);background-size: cover;padding: 80px;padding-top: 150px;float: left;}
+.left-app h2{color: white;}
+.left-app img{width: 20%;}
+.right-app{width: 50%;height: 500px;float: left}
+.top{width: 100%;height: 100px;padding: 20px;}
+.login{padding: 30px;}
+.login input{border-bottom: 1px solid gainsboro; width: 100%;margin-bottom: 30px;}
+.fcmb-btn{background: rgba(3,71,110,1);width: 200px;color: white;border-radius: 20px;float: left;}
+.fcmb-btn:hover{background: goldenrod;width: 200px;color: white;border-radius: 20px;}
+.tops{width: 100%;height: 70px;padding: 10px;}
+.tops a{width: 45%;height: 50px;float: left; padding: 10px;background: rgba(73,71,110,1); color: white;border-radius: 5px;margin-right: 10px;box-shadow:0 5px 5px 0 rgba(0,0,0,.14),0 5px 5px 0 rgba(0,0,0,.14);text-decoration: none;}
+.tops .actives{background: white;color: black;}
+.user{display: none;}
+.user.active{display: block;}
+.first.active{display: none;}
+.paginator{width: 100%;height: 70px;padding: 5px;background: white;}
+.paginator a {margin-right: 20px;}
+.pag-btn{background: rgba(3,71,110,1);color: white;}
+.pag-btn:hover{background:rgba(254,29,112,1);color: white;}
+.modal-content{background: none;border: none;width: 700px;}
+#chartContainer{width: 50%;height: 400px; float: left;}
+#chartContainer2{width: 50%;height: 400px;float: left;}

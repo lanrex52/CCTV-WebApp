@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CCTV App</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/ucmx.css">
+    <!--<link rel="stylesheet" href="css/fcmb.css">!-->
+    <link rel="stylesheet" href="/css/roboto.css">
+    <link rel="stylesheet" href="/css/josefin.css">
+    <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+    <script src="/js/jquery3.min.js"></script>
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/ckeditor.js"></script>
+    <script src="/js/canvasjs.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    @*<script>
+        function enforce_maxlength(event) {
+            var t = event.target;
+            if (t.hasAttribute('maxlength')) {
+                t.value = t.value.slice(0, t.getAttribute('maxlength'));
+            }
+        }
+        document.body.addEventListener('input', enforce_maxlength);
+    </script>*@
+</head>
+<body onload="startTime()">
+    <script src="/js/canvasjs.min.js"></script>
+    <div class="portal-content">
+        <div class="lagoon-nav blue">
+            <div class="profile-img">
+                <div class="pix-circle mx-auto">
+                    <div class="pix-img">
+                        <img src="/img/firstbank3.png">
+                    </div>
+                    <h4>Welcome</h4>
+                    <p class="text-center">@User.Identity.Name</p>
+                </div>
+            </div>
+            <div class="dev-links">
+                <ul>
+                    <li>
+                        <a asp-page="/Player/Dashboard">
+                            <i class="fa fa-desktop"></i>
+                            &nbsp;&nbsp;Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-page="/Player/CCTV">
+                            <i class="fa fa-camera"></i>
+                            &nbsp;&nbsp;CCTV
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-search"></i>
+                            &nbsp;&nbsp;Facial Recongition
+                        </a>
+                    </li>
+                    @*<li>
+            <a href="#">
+                <i class="fa fa-video"></i>
+                &nbsp;&nbsp;Videos
+            </a>
+        </li>*@
+                    @*<li>
+            <a href="#">
+                <i class="fa fa-map-marker"></i>
+                &nbsp;&nbsp;Add Location
+            </a>
+        </li>*@
+
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li>
+                            <a asp-page="/Player/Audit">
+                                <i class="fa fa-clipboard"></i>
+                                &nbsp;&nbsp;Audit trail
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-page="/Registration">
+                                <i class="fa fa-users"></i>
+                                &nbsp;&nbsp;User
+                            </a>
+                        </li>
+                    }
+                   
+
+
+                    <li class="nav-item">
+                        <form asp-page="/Signout" class="nav-link  text-dark">
+                            <button type="submit"><i class="fa fa-power-off">&nbsp;&nbsp;</i>Logout</button>
+                        </form>
+
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        
+
+        @*<div class="container">*@
+            @*<partial name="_CookieConsentPartial" />*@
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        @*</div>*@
+
+    </div>
+
+    @*<environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        </environment>
+        <environment exclude="Development">*@
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>*@
+    @*<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>*@
+    @*</environment>*@
+
+
+    @RenderSection("Scripts", required: false)
+    @RenderSection("JavaScript", required: false)
+
+</body>
+</html>

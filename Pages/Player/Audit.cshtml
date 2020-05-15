@@ -1,0 +1,68 @@
+﻿@page
+@model CCTV_App.Pages.Player.AuditModel
+@{
+    int i = 1;
+    string date = DateTime.Now.ToString("dddd, dd MMMM yyyy"); 
+
+}
+
+<div class="azure-content">
+    <div class="content-nav">
+        <div class="c-left">
+            <img src="/img/firstbank3.png" alt="FCMB Logo">
+            <p><b>@date</b></p>
+            <p>
+                <b id="txt">
+
+                </b>
+            </p>
+        </div>
+
+    </div>
+    @*<link rel="stylesheet" href="css/jquery.dataTables.min.css">
+        <script src="js/jquery.dataTables.min.js"></script>*@
+    <div class="muser">
+        <div class="col-md-12">
+            <div class="col-md-4 mx-auto">
+                <h6 class="alert alert-warning text-center" style="padding:3px;">Audit Trail</h6>
+            </div>
+            <table id="myTable" class="display cell-border" style="font-size:11px;">
+                <thead>
+                    <tr>
+                        <th style="width:4%">S/N</th>
+                        <th style="width:15%">Username</th>
+                        <th style="width:25%">FirstName</th>
+                        <th style="width:25%">LastName</th>
+                        <th style="width:15%">Role</th>
+
+                        <th style="width:15%">Login Time</th>
+                        <th style="width:15%">Logout TIme</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var audit in Model.Audit)
+                    {
+                        <tr>
+                            <td><span>@i</span></td>
+                            <td>@audit.UserName</td>
+
+                            <td>@audit.FirstName</td>
+                            <td>@audit.LastName</td>
+                            <td>@audit.Role</td>
+                            <td>@audit.SigninTime</td>
+                            <td>@audit.SignoutTime</td>
+
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+            <script>
+                $(document).ready(function () {
+                    $('#myTable').DataTable();
+
+                });
+            </script>
+        </div>
+    </div>
+</div>

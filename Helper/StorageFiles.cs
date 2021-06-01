@@ -15,8 +15,7 @@ namespace CCTV_App.Helper
         private readonly ILogger<StorageFiles> _logger;
         
 
-        //private string containerName = "toyotacctvcontainer";
-        //private string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=toyotacctvstorageaccount;AccountKey=Z0tSLlnnuj42jupCGuAcqaxDXSmp3LtoFcXqYSSqcfX9XS/mgKATvfBtrfdkDvf4oZDcKuuME1KAeeeRxO1pUA==";
+        n
         public StorageFiles(ILogger<StorageFiles> logger)
         {
             _logger = logger;

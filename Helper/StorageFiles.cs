@@ -90,7 +90,7 @@ namespace CCTV_App.Helper
 
                 // return fileUris;
 
-                //CloudBlobDirectory dir =  container.GetBlockBlobReference("https://toyotacctvstorageaccount.blob.core.windows.net/toyotacctvcontainer/G:/");
+                //CloudBlobDirectory dir =  container.GetBlockBlobReference("");
 
             }
             catch (System.Exception e)
